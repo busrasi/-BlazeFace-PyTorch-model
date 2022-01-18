@@ -36,6 +36,19 @@ Also you can install all required packages with following command.
   
     pip install -r requirements.txt
 
+## Fix some problems about file directories. 
+
+```
+In the Run the “FaceDetectionConfig test case from the MediaPipe repo code cell, change this line
+anchors_golden = np.loadtxt("./mediapipe/mediapipe/calculators/tflite/testdata/anchor_golden_file_0.txt")
+to
+anchors_golden = np.loadtxt("anchor_golden_file_0.txt")
+   
+```
+
+		
+
+
 ## Building Sepecialized Docker Image for TFLite Models
     
     docker build -t kyc_blazeface .
